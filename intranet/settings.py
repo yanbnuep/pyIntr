@@ -54,7 +54,7 @@ ROOT_URLCONF = 'intranet.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.jinja2.Jinja2.',
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -128,3 +128,7 @@ STATIC_ROOT= os.path.join(BASE_DIR,"static/")
 ####################################
     ##  CKEDITOR CONFIGURATION ##
 ####################################
+MEDIA_ROOT = os.path.join(BASE_DIR, "static/media")
+MEDIA_URL = "/media/"
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = 'pillow'
