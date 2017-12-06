@@ -12,15 +12,5 @@ class Post(models.Model):
     content = RichTextField()
 
 
-class PostAdminForm(forms.ModelForm):
-    content = forms.CharField(widget=CKEditorWidget())
 
-    class Meta:
-        model = Post
-
-
-class PostAdmin(admin.ModelAdmin):
-    form = PostAdminForm
-
-
-admin.site.register(Post, PostAdmin)
+admin.site.register(Post)
