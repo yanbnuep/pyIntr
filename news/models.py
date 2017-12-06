@@ -1,9 +1,26 @@
 from django.db import models
 
 # Create your models here.
-from ckeditor.fields import RichTextFormField
+from ckeditor.fields import RichTextField
 
-class news(models.Model):
-    title = models.CharField(u'title',default='title',max_length=30)
-    content = RichTextFormField(u'content', default='',null = True, blank=True)
-    updatedTime = models.DateTimeField(u'updateTime', auto_now=True)
+from django import forms
+from django.contrib import admin
+from ckeditor.widgets import CKEditorWidget
+
+
+class Post(models.Model):
+    content = RichTextField()
+
+
+class PostAdminForm(forms.ModelForm):
+    content = forms.CharField(widget=CKEditorWidget())
+
+    class Meta:
+        model = Post
+
+
+class PostAdmin(admin.ModelAdmin):
+    form = PostAdminForm
+
+
+admin.site.register(Post, PostAdmin)
