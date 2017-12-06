@@ -31,7 +31,7 @@ ALLOWED_HOSTS =['127.0.0.1','localhost','47.91.247.12']
 # Application definition
 
 INSTALLED_APPS = [
-    'news.apps.NewsConfig'
+    'news.apps.NewsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
