@@ -10,4 +10,7 @@ def index(request):
     context = {
         'newsList': newsList
     }
-    return render(request,'/index.html',context)
+    return render(request,'index.html',context)
+def newsContent(request,news_id):
+    news = News.objects.get(News,pk=news_id)
+    return render(request,'newsContent.html',{'news':news})
