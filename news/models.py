@@ -14,5 +14,5 @@ class News(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.News_text
+        return self.content
 
