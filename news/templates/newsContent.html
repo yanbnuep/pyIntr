@@ -5,6 +5,6 @@
     <title>{{ news.title }}</title>
 </head>
 <body>
-    {{ news.content }}
+    {% autoescape off %}{{ news.content }}{% endautoescape %}
 </body>
 </html>
