@@ -8,7 +8,7 @@
 {% if newsList %}
     <ul>
         {% for news in newsList %}
-            <li><a href="news/{{ news.id }}/">{{ news.title }}</a></li>
+            <li><a href="/news/{{ news.id }}/">{{ news.title }}</a></li>
         {% endfor %}
     </ul>
 {% else %}
