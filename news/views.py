@@ -13,5 +13,8 @@ def index(request):
     return render(request,'index.html',context)
 
 def newsContent(request,news_id):
-    news = News.objects.get(News,pk=news_id)
+    try:
+        news = News.objects.get(pk = news_id)
+    except News.DoesNotExist:
+        raise HttpResponse(request,"doesn't exist")
     return render(request,'newsContent.html',{'news':news})
