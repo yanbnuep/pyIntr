@@ -10,4 +10,4 @@ def index(request):
     context = {
         'newsList': newsList
     }
-    return render(request,'index.html',context)
+    return render(request,'/index.html',context)
