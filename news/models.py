@@ -4,7 +4,6 @@ from django.db import models
 from django import forms
 from django.contrib import admin
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
-from post.models import Post
 
 class News(forms.ModelForm):
     title = models.CharField(max_length=50)
