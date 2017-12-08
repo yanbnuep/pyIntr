@@ -5,7 +5,7 @@ from ckeditor_uploader.fields import  RichTextUploadingField
 
 class News(models.Model):
     title = models.CharField(max_length=50)
-    content = RichTextUploadingField()
+    content = RichTextUploadingField(blank=True,null=True,verbose_name="context")
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
