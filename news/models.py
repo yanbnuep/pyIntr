@@ -1,11 +1,8 @@
 from django.db import models
 
 # Create your models here.
-from ckeditor.fields import RichTextField
 
-from django import forms
-from django.contrib import admin
-from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor_uploader.fields import RichTextField, RichTextUploadingField
 
 class News(models.Model):
     title = models.CharField(max_length=50)
