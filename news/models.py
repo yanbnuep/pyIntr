@@ -2,7 +2,6 @@ from django.db import models
 
 # Create your models here.
 from django import forms
-from django.contrib import admin
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 class News(forms.ModelForm):
