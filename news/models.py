@@ -9,7 +9,7 @@ class News(models.Model):
     cover = models.ImageField(upload_to='/coverImg')
 
     def image_tag(self):
-        return mark_safe('<img src="/directory/%s" width="150" height="150" />' % self.cover)
+        return mark_safe('<br>%s</br>' % self.cover)
     image_tag.short_description = 'Image'
     content = RichTextUploadingField(blank=True, null=True, verbose_name="context")
     created = models.DateTimeField(auto_now_add=True)
