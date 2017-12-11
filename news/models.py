@@ -5,7 +5,7 @@ from ckeditor_uploader.fields import  RichTextUploadingField
 
 class News(models.Model):
     title = models.CharField(max_length=50)
-    cover = models.ImageField(upload_to='static/media/coverImg', blank=True, null=True)
+    cover = models.ImageField(upload_to='media/coverImg', blank=True, null=True)
     def image_thumb(self):
         return '<img src="/media/coverImg/%s" width="100" height="100" />' % (self.cover)
         image_thumb.allow_tags = True
