@@ -7,8 +7,9 @@ class News(models.Model):
     title = models.CharField(max_length=50)
     cover = models.ImageField(upload_to='media/coverImg', blank=True, null=True)
     def image_thumb(self):
-        return '<img src="/media/coverImg/%s" width="100" height="100" />' % (self.cover)
-        image_thumb.allow_tags = True
+        return u'<img src="%s" />' % (self.cover.url)
+    image_thumb.short_description = 'Thumbnail'
+    image_thumb.allow_tags = True
     content = RichTextUploadingField(blank=True,null=True,verbose_name="context")
     created = models.DateTimeField(auto_now_add=True)
 
