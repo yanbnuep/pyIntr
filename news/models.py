@@ -34,7 +34,7 @@ class AdminImageWidget(AdminFileWidget):
 
 class MyAdmin(admin.ModelAdmin):
     def formfield_for_dbfield(self, db_field, **kwargs):
-        if db_field.name == 'profile_image':
+        if db_field.name == 'cover':
             request = kwargs.pop("request", None)
             kwargs['widget'] = AdminImageWidget
             return db_field.formfield(**kwargs)
