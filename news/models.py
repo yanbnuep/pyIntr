@@ -14,7 +14,7 @@ class News(models.Model):
     cover = ResizedImageField(upload_to='coverImg/', size=[500, 300])
     content = RichTextUploadingField(blank=True, null=True, verbose_name="context")
     created = models.DateTimeField(auto_now_add=True)
-
+    news_date = models.DateField()
     def __str__(self):
         return self.title
 
