@@ -6,7 +6,7 @@ from ckeditor_uploader.fields import  RichTextUploadingField
 from django_resized import ResizedImageField
 from django.utils.safestring import mark_safe
 from django.contrib.admin.widgets import AdminFileWidget
-
+from datetime import datetime
 
 class News(models.Model):
 
@@ -14,7 +14,7 @@ class News(models.Model):
     cover = ResizedImageField(upload_to='coverImg/', size=[500, 300])
     content = RichTextUploadingField(blank=True, null=True, verbose_name="context")
     created = models.DateTimeField(auto_now_add=True)
-    news_date = models.DateField()
+    news_date = models.DateField(default=datetime.now, blank=False)
     def __str__(self):
         return self.title
 
