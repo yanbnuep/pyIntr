@@ -25,7 +25,7 @@ SECRET_KEY = 'otejej%s*ctsc#cb_ohgb0$h1ig22q!ap)c$f2!_4l4*m#s#pf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =['127.0.0.1','localhost','47.91.247.12']
+ALLOWED_HOSTS =['127.0.0.1','localhost','47.91.247.12','ianwu2017.top','www.ianwu2017.top']
 
 
 # Application definition
